@@ -122,12 +122,12 @@ class Movies extends Component {
     const { user } = this.props;
 
     const moviesCount = allMovies.length;
-    // if (moviesCount === 0)
-    //   return (
-    //     <div className="container py-5">
-    //       <p className="pt-3"> There are no movies in the database </p>
-    //     </div>
-    //   );
+    if (moviesCount === 0)
+      return (
+        <div className="container py-5">
+          <p className="pt-3"> There are no movies in the database </p>
+        </div>
+      );
 
     const { totalCount, data: movies } = this.getPageData();
 
